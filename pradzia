@@ -1,0 +1,45 @@
+#include <iostream>
+#include <fstream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+    vector<int> V;
+    V.push_back(7);  // elementa deda i pabaiga
+    V.push_back(-17);
+    V.push_back(476);
+    V.push_back(142);
+    int a;
+    cout<<"a = "; cin>>a;
+    V.push_back(a);
+    cout<<V.front()<<endl;
+    cout<<V.back()<<endl;
+
+    for (int i = 0; i < V.size(); i++){ // size nusako dydi
+        cout<<V[i]<<" ";
+    }
+
+        cout<<endl;
+        // V.insert(V.begin() + 2, 13); // prideda i nurodyta vieta
+            V.erase(V.begin() + 2);
+
+            for (int i = 0; i < V.size(); i++){ // size nusako dydi
+
+                cout<<V[i]<<" ";
+    }
+
+    V.clear();
+        for (int i = 0; i < V.size(); i++){ // size nusako dydi
+        cout<<V[i]<<" ";
+    }
+
+    if(V.empty()){
+        cout<<"Tuscias /n";
+    } else{
+        cout<<"Pilnas /n";
+    }
+
+    return 0;
+}
